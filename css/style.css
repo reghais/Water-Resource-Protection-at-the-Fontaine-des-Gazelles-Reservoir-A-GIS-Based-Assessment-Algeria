@@ -21,7 +21,6 @@
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
-    --font-arabic: 'Cairo', system-ui, -apple-system, sans-serif;
     --font-latin: 'Inter', system-ui, -apple-system, sans-serif;
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -38,19 +37,13 @@ html {
 }
 
 body {
-    font-family: var(--font-arabic);
+    font-family: var(--font-latin);
     background-color: var(--bg-main);
     color: var(--text-primary);
     line-height: 1.7;
-    direction: rtl;
-    text-align: right;
-    overflow-x: hidden;
-}
-
-body[dir="ltr"] {
-    font-family: var(--font-latin);
     direction: ltr;
     text-align: left;
+    overflow-x: hidden;
 }
 
 .container {
@@ -271,17 +264,11 @@ a:hover {
 }
 
 .hero-subtitle-en {
-    font-family: var(--font-latin);
     font-size: 1.05rem;
     color: var(--primary-light);
     font-weight: 600;
     margin-bottom: 1.25rem;
-    direction: ltr;
     text-align: left;
-}
-
-body[dir="rtl"] .hero-subtitle-en {
-    text-align: right;
 }
 
 .hero-description {
@@ -356,7 +343,6 @@ body[dir="rtl"] .hero-subtitle-en {
     padding: 0.6rem;
     text-align: center;
     font-size: 0.8rem;
-    font-family: var(--font-latin);
     font-weight: 600;
 }
 
@@ -415,7 +401,6 @@ body[dir="rtl"] .hero-subtitle-en {
     font-size: 2rem;
     font-weight: 800;
     color: var(--primary-dark);
-    font-family: var(--font-latin);
 }
 
 .stat-label {
@@ -471,7 +456,6 @@ body[dir="rtl"] .hero-subtitle-en {
 }
 
 .tab-num {
-    font-family: var(--font-latin);
     font-weight: 800;
     font-size: 1.1rem;
     opacity: 0.8;
@@ -524,7 +508,6 @@ body[dir="rtl"] .hero-subtitle-en {
     font-size: 0.8rem;
     border-radius: var(--radius-sm);
     margin-bottom: 0.75rem;
-    font-family: var(--font-latin);
 }
 
 .chapter-body h3 {
@@ -536,20 +519,14 @@ body[dir="rtl"] .hero-subtitle-en {
     font-size: 1.05rem;
     color: var(--text-primary);
     margin-bottom: 1.25rem;
-
 }
 
 .chapter-highlights {
     background-color: var(--bg-alt);
-    border-right: 4px solid var(--primary-color);
+    border-left: 4px solid var(--primary-color);
     padding: 1.25rem;
     border-radius: var(--radius-sm);
     margin-top: 1rem;
-}
-
-body[dir="ltr"] .chapter-highlights {
-    border-right: none;
-    border-left: 4px solid var(--primary-color);
 }
 
 .chapter-highlights h4 {
@@ -562,14 +539,8 @@ body[dir="ltr"] .chapter-highlights {
 }
 
 .chapter-highlights ul, .chapter-highlights ol {
-    padding-right: 1.25rem;
-    color: var(--text-secondary);
-}
-
-body[dir="ltr"] .chapter-highlights ul,
-body[dir="ltr"] .chapter-highlights ol {
-    padding-right: 0;
     padding-left: 1.25rem;
+    color: var(--text-secondary);
 }
 
 .chapter-highlights li {
@@ -628,11 +599,6 @@ body[dir="ltr"] .chapter-highlights ol {
 .academic-table th, .academic-table td {
     padding: 0.75rem 1rem;
     border: 1px solid var(--border-color);
-    text-align: right;
-}
-
-body[dir="ltr"] .academic-table th,
-body[dir="ltr"] .academic-table td {
     text-align: left;
 }
 
@@ -665,7 +631,6 @@ body[dir="ltr"] .academic-table td {
 .zone-rpp { border-top: 4px solid #10b981; }
 
 .zone-badge {
-    font-family: var(--font-latin);
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--text-muted);
@@ -813,18 +778,20 @@ body[dir="ltr"] .academic-table td {
     gap: 1rem;
 }
 
-.avatar-circle {
-    width: 140px;
-    height: 140px;
+.avatar-photo-box {
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
+    overflow: hidden;
     box-shadow: var(--shadow-md);
     border: 4px solid #ffffff;
+    background-color: var(--primary-color);
+}
+
+.author-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .author-badge {
@@ -832,7 +799,6 @@ body[dir="ltr"] .academic-table td {
     background-color: var(--primary-dark);
     color: #ffffff;
     font-size: 0.8rem;
-    font-family: var(--font-latin);
     font-weight: 600;
     border-radius: 20px;
 }
@@ -952,18 +918,12 @@ body[dir="ltr"] .academic-table td {
 .modal-close, .lightbox-close {
     position: absolute;
     top: 1rem;
-    left: 1rem;
+    right: 1rem;
     background: transparent;
     border: none;
     font-size: 1.8rem;
     color: var(--text-muted);
     cursor: pointer;
-}
-
-body[dir="ltr"] .modal-close,
-body[dir="ltr"] .lightbox-close {
-    left: auto;
-    right: 1rem;
 }
 
 .modal-card h3 {
@@ -1074,7 +1034,7 @@ body[dir="ltr"] .lightbox-close {
     }
 
     .main-nav {
-        display: none; /* Can add hamburger menu if needed */
+        display: none;
     }
 }
 
