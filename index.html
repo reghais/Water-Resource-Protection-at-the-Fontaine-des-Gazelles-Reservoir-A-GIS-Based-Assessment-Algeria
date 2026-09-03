@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water-Resource Protection at the Fontaine des Gazelles Reservoir | Dr. Azzeddine Reghais</title>
+    <meta name="description" content="A GIS-Based Assessment of Water-Resource Protection at the Fontaine des Gazelles Reservoir & Oued El-Hai Watershed, Algeria by Dr. Azzeddine Reghais.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="brand-logo">
+                <i class="fa-solid fa-droplet icon-logo"></i>
+                <div class="brand-text">
+                    <span class="brand-title" data-i18n="brandTitle">حماية الموارد المائية</span>
+                    <span class="brand-subtitle" data-i18n="brandSubtitle">د. عز الدين رغيس - كتاب أكاديمي</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active" data-i18n="navAbout">عن الكتاب</a></li>
+                    <li><a href="#stats" class="nav-link" data-i18n="navStats">مؤشرات الحوض</a></li>
+                    <li><a href="#chapters" class="nav-link" data-i18n="navChapters">فصول الكتاب</a></li>
+                    <li><a href="#methodology" class="nav-link" data-i18n="navMethodology">المنهجية و نظم المعلومات</a></li>
+                    <li><a href="#gallery" class="nav-link" data-i18n="navGallery">الأشكال و الخرائط</a></li>
+                    <li><a href="#author" class="nav-link" data-i18n="navAuthor">المؤلف و الاتصال</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="lang-toggle" class="btn btn-outline btn-lang">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="lang-text">English</span>
+                </button>
+                <a href="#access-modal" class="btn btn-primary btn-request" id="btn-request-top" data-i18n="btnRequestAccess">طلب نسخة / إذن الوصول</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge-tag" data-i18n="heroBadge"><i class="fa-solid fa-book-bookmark"></i> كتاب علمي محكّم ومقيد الوصول</div>
+                <h1 class="hero-title" data-i18n="heroTitle">
+                    حماية الموارد المائية في سد عين الناقة (Fontaine des Gazelles): تقييم قائم على نظم المعلومات الجغرافية (GIS) - الجزائر
+                </h1>
+                <p class="hero-subtitle-en">
+                    Water-Resource Protection at the Fontaine des Gazelles Reservoir: A GIS-Based Assessment (Algeria)
+                </p>
+                <p class="hero-description" data-i18n="heroDesc">
+                    دراسة هيدرولوجية وبيئية متكاملة تقدم إطاراً منهجياً مبتكراً لتحديد محيطات حماية الموارد المائية السطحية في حوض وادي الحي وشبه أقاليم الأوراس وسد عين الناقة (بسكرة - باتنة)، بالاعتماد على التحليل المكاني، زمن الانتقال المائي، ونمذجة مخاطر التلوث.
+                </p>
+
+                <div class="book-meta-pills">
+                    <span class="meta-pill"><i class="fa-solid fa-user-graduate"></i> <span data-i18n="metaAuthor">المؤلف: د. عز الدين رغيس</span></span>
+                    <span class="meta-pill"><i class="fa-solid fa-building-columns"></i> <span data-i18n="metaUniv">جامعة جيجل / جامعة باتنة 2</span></span>
+                    <span class="meta-pill"><i class="fa-solid fa-file-pdf"></i> <span data-i18n="metaPages">101 صفحة / 6 فصول متكاملة</span></span>
+                    <span class="meta-pill"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="metaAccess">كتاب مدفوع مقيد الوصول</span></span>
+                </div>
+
+                <div class="hero-cta-buttons">
+                    <a href="https://wa.me/213668261708?text=مرحباً%20الدكتور%20عز%20الدين%20رغيس،%20أود%20طلب%20نسخة%20من%20كتابكم%20حول%20حماية%20مياه%20سد%20عين%20الناقة" target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btnWhatsapp">طلب الكتاب عبر واتساب</span>
+                    </a>
+                    <a href="mailto:azzeddine.reghais@gmail.com?subject=طلب%20كتاب%20حماية%20الموارد%20المائية%20سد%20عين%20الناقة" class="btn btn-email">
+                        <i class="fa-solid fa-envelope"></i> <span data-i18n="btnEmail">تواصل عبر البريد الإلكتروني</span>
+                    </a>
+                    <a href="#chapters" class="btn btn-secondary">
+                        <i class="fa-solid fa-list-check"></i> <span data-i18n="btnExplore">استكشاف المحاور والأشكال</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="book-3d-card">
+                    <img src="assets/img/figures/book_cover.jpg" alt="غلاف الكتاب - حماية الموارد المائية" class="book-cover-img">
+                    <div class="cover-overlay-badge">
+                        <span><i class="fa-solid fa-lock"></i> Restricted Academic Edition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics & Indicators -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2 data-i18n="statsTitle">مؤشرات وأرقام الحوض الهيدروغرافي والسد</h2>
+                <p data-i18n="statsSubtitle">أهم المعطيات الكمية وخصائص حوض وادي الحي وسد عين الناقة المعتمدة في الدراسة</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-chart-area"></i></div>
+                    <div class="stat-value">1,660 km²</div>
+                    <div class="stat-label" data-i18n="statWatershedArea">مساحة حوض وادي الحي (Sub-Watershed)</div>
+                    <p class="stat-desc" data-i18n="statWatershedAreaDesc">يمتد الحوض عبر ولايتي باتنة وبسكرة متغذياً من المرتفعات الجبلية للأوراس.</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-water"></i></div>
+                    <div class="stat-value">55 hm³</div>
+                    <div class="stat-label" data-i18n="statDamCapacity">السعة التخزينية لسد عين الناقة</div>
+                    <p class="stat-desc" data-i18n="statDamCapacityDesc">سد استراتيجي لتوفير مياه الشرب والري الزراعي في منطقة عين الناقة والقنطرة.</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="stat-value">3 Zone System</div>
+                    <div class="stat-label" data-i18n="statZones">محيطات الحماية المحددة (IPP / CPP / RPP)</div>
+                    <p class="stat-desc" data-i18n="statZonesDesc">محيط حماية مباشر (فوري)، قريب (عالي الحساسية)، وبعيد (على مستوى الحوض).</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                    <div class="stat-value">1 - 45 Hours</div>
+                    <div class="stat-label" data-i18n="statTransferTime">نطاق زمن الانتقال المائي (Water Transfer Time)</div>
+                    <p class="stat-desc" data-i18n="statTransferTimeDesc">حساب زمن تدفق الجريان السطحي من أي نقطة بالحوض وصولاً إلى بحيرة السد.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Chapters Explorer -->
+    <section id="chapters" class="chapters-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2 data-i18n="chaptersTitle">محاور وفصول الكتاب الأكاديمي</h2>
+                <p data-i18n="chaptersSubtitle">تصفح الملخصات العلمية الشاملة والمحاور الستة المستخلصة من الكتاب مع الأشكال الخرائطية المتعلقة بكل فصل</p>
+            </div>
+
+            <!-- Chapter Navigation Tabs -->
+            <div class="chapter-tabs-wrapper">
+                <div class="chapter-tabs" id="chapter-tabs">
+                    <button class="tab-btn active" data-chapter="ch1">
+                        <span class="tab-num">01</span>
+                        <span class="tab-title" data-i18n="tabCh1">المفاهيم والتحديات</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch2">
+                        <span class="tab-num">02</span>
+                        <span class="tab-title" data-i18n="tabCh2">إطار حوض وادي الحي</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch3">
+                        <span class="tab-num">03</span>
+                        <span class="tab-title" data-i18n="tabCh3">الجيولوجيا والهيدروجيولوجيا</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch4">
+                        <span class="tab-num">04</span>
+                        <span class="tab-title" data-i18n="tabCh4">الخصائص المورفومترية</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch5">
+                        <span class="tab-num">05</span>
+                        <span class="tab-title" data-i18n="tabCh5">الإطار المنهجي لنظم GIS</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch6">
+                        <span class="tab-num">06</span>
+                        <span class="tab-title" data-i18n="tabCh6">التطبيق ومحيطات الحماية</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chapter Content Panels -->
+            <div class="chapter-panels-container">
+
+                <!-- CH1 Panel -->
+                <div class="chapter-panel active" id="panel-ch1">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 1</span>
+                            <h3 data-i18n="ch1Header">حماية الموارد المائية: المفاهيم، التحديات والمقاربات Scientific Foundations</h3>
+                            <p class="lead-p" data-i18n="ch1Lead">
+                                يستعرض الفصل الأول الأطر النظرية والبيئية لحماية الموارد المائية السطحية في المناطق الجافة وشبه الجافة، مع التركيز على حوض التغذية الكامل بدلاً من بحيرة السد منفردة.
+                            </p>
+                            <div class="chapter-highlights">
+                                <h4><i class="fa-solid fa-lightbulb"></i> <span data-i18n="chHighlights">أهم النقاط والمحاور الرئيسية:</span></h4>
+                                <ul>
+                                    <li data-i18n="ch1P1"><strong>تحديد مصادر التلوث:</strong> التمييز بين المصادر النقطية (Point Sources) كالمصبات والمصانع، والمصادر المنتشرة (Diffuse Sources) كالجريان الزراعي.</li>
+                                    <li data-i18n="ch1P2"><strong>مقاربة حوض المجمع المائي (Catchment Approach):</strong> التعامل مع الحوض كـ وحدة مكانية متكاملة تنقل المياه، الرسوبيات، والملوثات نحو السد.</li>
+                                    <li data-i18n="ch1P3"><strong>النموذج المفاهيمي لخطر التلوث:</strong> التسلسل الفيزيائي (المصدر المصدر ← المسار Pathway ← الانتقال Transfer ← المستقبل Receptor).</li>
+                                    <li data-i18n="ch1P4"><strong>مستويات الحماية الثلاثية:</strong> المنطقة الفورية (Immediate), المنطقة القريبة (Close), والمنطقة البعيدة (Remote).</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig10_gis_framework.jpg" alt="GIS Framework Overview" class="lightbox-trigger" data-img="assets/img/figures/fig10_gis_framework.jpg" data-caption="الشكل 10: إطار التكامل المكاني القائم على نظم المعلومات الجغرافية GIS">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 10: هيكلية الإطار المنهجي لنظم GIS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH2 Panel -->
+                <div class="chapter-panel" id="panel-ch2">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 2</span>
+                            <h3 data-i18n="ch2Header">حوض وادي الحي: الإطار الجغرافي، البيئي والاجتماعي والاقتصادي</h3>
+                            <p class="lead-p" data-i18n="ch2Lead">
+                                توصيف دقيق لحوض وادي الحي الذي يغطي مساحة 1,660 كم² ويشمل أجزاء من ولايتي باتنة وبسكرة (مثل عين التوتة، القنطرة، ومزارع برني).
+                            </p>
+                            <div class="chapter-highlights">
+                                <h4><i class="fa-solid fa-location-dot"></i> <span data-i18n="chHighlights">أهم النقاط والمحاور الرئيسية:</span></h4>
+                                <ul>
+                                    <li data-i18n="ch2P1"><strong>الموقع الجغرافي والإداري:</strong> يقع الحوض في الأطلس الصحراوي الشرقي، ويصب في حوض شط ملغيغ الاندفاعي (Endorheic basin).</li>
+                                    <li data-i18n="ch2P2"><strong>سد عين الناقة (Fontaine des Gazelles Dam):</strong> سد مائي بسعة 55 مليون م³ أنشئ لتعبئة المياه ومواجهة الجفاف وإمداد المنطقة بالري والشرب.</li>
+                                    <li data-i18n="ch2P3"><strong>الضغوط البشرية والبيئية:</strong> النمو السكاني في عين التوتة والقنطرة، التوسع الزراعي وتصريف مياه الصرف الصحي غير المعالجة في الأودية.</li>
+                                    <li data-i18n="ch2P4"><strong>ظاهرة التوحش والاطملاء (Sedimentation):</strong> الانجراف المائي الشديد من الروافد الشمالية يقلل من السعة التخزينية المتبقية للسد.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig1_location.png" alt="Geographical Location" class="lightbox-trigger" data-img="assets/img/figures/fig1_location.png" data-caption="الشكل 1: الموقع الجغرافي والإقليمي لحوض وادي الحي وسد عين الناقة">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 1: الخريطة الموقع الجغرافي لحوض وادي الحي</span>
+                            </div>
+                            <div class="media-preview-box mt-2">
+                                <img src="assets/img/figures/fig2_admin.png" alt="Administrative Map" class="lightbox-trigger" data-img="assets/img/figures/fig2_admin.png" data-caption="الشكل 2: الخريطة الإدارية والتقسيم السكاني لحوض وادي الحي">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 2: التقسيم الإداري للحوض الفرعي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH3 Panel -->
+                <div class="chapter-panel" id="panel-ch3">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 3</span>
+                            <h3 data-i18n="ch3Header">الإطار الجيولوجي والهيدروجيولوجي للحوض Geology & Aquifers</h3>
+                            <p class="lead-p" data-i18n="ch3Lead">
+                                تحليل التكاوين الصخرية والبنيوية الممتدة من الترياس إلى الرباعي، وتأثير النفاذية والتشققات الجيولوجية على تسرب المياه الجوفية والجريان السطحي.
+                            </p>
+                            <div class="chapter-highlights">
+                                <h4><i class="fa-solid fa-mountain"></i> <span data-i18n="chHighlights">أهم النقاط والمحاور الرئيسية:</span></h4>
+                                <ul>
+                                    <li data-i18n="ch3P1"><strong>التتابع الطباقي (Stratigraphy):</strong> صخور متبخرات الترياس، كربونات التوروني والمستريختي، وتكاوين القاري النهائي (Continental Intercalaire / Complexe Terminal).</li>
+                                    <li data-i18n="ch3P2"><strong>الأنظمة المائية (Aquifers):</strong> خزان التوروني الكارستي، خزان الرباعي الوديان، والتداخل بين المياه الجوفية والمياه السطحية.</li>
+                                    <li data-i18n="ch3P3"><strong>التحكم البنيوي والفوالق:</strong> الفوالق والالتواءات (Synclines/Anticlines) تؤثر مباشرة على مسارات توجيه الجريان والتغذية العكسية.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig3_geology.jpg" alt="Geological Map" class="lightbox-trigger" data-img="assets/img/figures/fig3_geology.jpg" data-caption="الشكل 3: الخريطة الجيولوجية الإقليمية لحوض وادي الحي">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 3: الخريطة الجيولوجية للحوض</span>
+                            </div>
+                            <div class="media-preview-box mt-2">
+                                <img src="assets/img/figures/fig4_aquifers.png" alt="Main Aquifers" class="lightbox-trigger" data-img="assets/img/figures/fig4_aquifers.png" data-caption="الشكل 4: الخزانات المائية والمجموعات الهيدروجيولوجية الرئيسية">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 4: الخزانات والمجموعات المائية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH4 Panel -->
+                <div class="chapter-panel" id="panel-ch4">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 4</span>
+                            <h3 data-i18n="ch4Header">الخصائص المورفومترية والهيدرولوجية للحوض Physiography & Hydrology</h3>
+                            <p class="lead-p" data-i18n="ch4Lead">
+                                حساب المعاملات المورفومترية الأساسية وشبكة الصرف الصحي وتحديد مؤشرات الانجراف السيلي وزمن التركيز المائي.
+                            </p>
+
+                            <!-- Morphometric Parameters Table -->
+                            <div class="table-responsive mt-3">
+                                <table class="academic-table">
+                                    <thead>
+                                        <tr>
+                                            <th>المعلم المورفومتري</th>
+                                            <th>الرمز / Unit</th>
+                                            <th>القيمة الملاحظة</th>
+                                            <th>الدلالة الهيدرولوجية</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>معامل الانضغاط (Gravelius Index)</td>
+                                            <td>Kc</td>
+                                            <td>1.45 - 1.62</td>
+                                            <td>حوض مستطيل نسبياً يقلل من ذروة الفيضان المفاجئ مقارنة بالأحواض الدائرية.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>كثافة الصرف المائي (Drainage Density)</td>
+                                            <td>Dd (km/km²)</td>
+                                            <td>2.1 - 3.4 km/km²</td>
+                                            <td>كثافة صرف متوسطة إلى عالية تعكس استجابة هيدرولوجية سريعة للجريان.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>زمن التركيز (Concentration Time)</td>
+                                            <td>Tc (hours)</td>
+                                            <td>~ 12 - 18 hours</td>
+                                            <td>الزمن الكلي لوصول أبعد قطرة مطر في أعالي الحوض إلى المخرج.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>معامل السيلية (Torrentiality)</td>
+                                            <td>Ct</td>
+                                            <td>مرتفع في الأعالي</td>
+                                            <td>تآكل شديد ونقل قوي للرسوبيات باتجاه بحيرة السد.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig6_hydrographic.png" alt="Hydrographic Network" class="lightbox-trigger" data-img="assets/img/figures/fig6_hydrographic.png" data-caption="الشكل 6: شبكة الصرف الهيدروغرافي والروافد الرئيسية لوادي الحي">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 6: شبكة الصرف الهيدروغرافي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH5 Panel -->
+                <div class="chapter-panel" id="panel-ch5">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 5</span>
+                            <h3 data-i18n="ch5Header">الإطار المنهجي لتحديد محيطات حماية الموارد المائية GIS Workflow</h3>
+                            <p class="lead-p" data-i18n="ch5Lead">
+                                تطوير منهجية مكانية معتمدة على نظم GIS تحسب "زمن الانتقال المائي" (Water Transfer Time) بدلاً من النطاقات الدائرية الهندسية الصماء.
+                            </p>
+                            <div class="chapter-highlights">
+                                <h4><i class="fa-solid fa-diagram-project"></i> <span data-i18n="chHighlights">سلسلة المعالجة المكانية في GIS:</span></h4>
+                                <ol class="steps-list">
+                                    <li><strong>نموذج الارتفاع الرقمي (DEM):</strong> استخراج الارتفاعات والميول وانحدارات السطح.</li>
+                                    <li><strong>خوارزمية اتجاه التدفق (D8 Flow Direction):</strong> تحديد مسار جريان المياه بين الخلايا المجاورة.</li>
+                                    <li><strong>التراكم الهيدرولوجي (Flow Accumulation):</strong> تجميع كميات التدفق وتحديد الأودية والشعاب.</li>
+                                    <li><strong>خشونة السطح ومعامل مانينغ (Manning Roughness n):</strong> حساب مقاومة السطح للجريان بناءً على غطاء الأرض (Land Use).</li>
+                                    <li><strong>حساب زمن الانتقال المائي (Transfer Time):</strong> دمج المسافة، السرعة، والانحدار وفق معادلة مانينغ:
+                                        <div class="math-formula">
+                                            \( V = \frac{1}{n} R^{2/3} S^{1/2} \quad \implies \quad T_c = \sum \frac{d_i}{V_i} \)
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig10_gis_framework.jpg" alt="GIS Integrated Workflow" class="lightbox-trigger" data-img="assets/img/figures/fig10_gis_framework.jpg" data-caption="الشكل 10: مراحل المعالجة والتكامل المكاني في GIS">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 10: مخطط التكامل المنهجي للـ GIS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH6 Panel -->
+                <div class="chapter-panel" id="panel-ch6">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 6</span>
+                            <h3 data-i18n="ch6Header">تطبيق مفهوم محيطات الحماية على سد عين الناقة Application & Results</h3>
+                            <p class="lead-p" data-i18n="ch6Lead">
+                                النتائج النهائية لتطبيق الإطار المنهجي واستخراج خرائط محيطات الحماية المباشرة، القريبة، والبعيدة لسد عين الناقة.
+                            </p>
+
+                            <div class="protection-zones-cards mt-3">
+                                <div class="p-zone-card zone-ipp">
+                                    <div class="zone-badge">Zone I - IPP</div>
+                                    <h4>محيط الحماية المباشر (Immediate)</h4>
+                                    <p>يشمل بحيرة السد وضفافها مباشرة. يمنع فيه كلياً أي نشاط بشري أو بناء أو إلقاء نفايات لتفادي التلوث الفوري المباشر.</p>
+                                </div>
+                                <div class="p-zone-card zone-cpp">
+                                    <div class="zone-badge">Zone II - CPP</div>
+                                    <h4>محيط الحماية القريب (Close)</h4>
+                                    <p>المناطق التي يقل فيها زمن وصول المياه إلى السد عن <strong>ساعة واحدة (< 1h)</strong>. تتطلب رقابة صارمة على الأنشطة الزراعية والصناعية.</p>
+                                </div>
+                                <div class="p-zone-card zone-rpp">
+                                    <div class="zone-badge">Zone III - RPP</div>
+                                    <h4>محيط الحماية البعيد (Remote)</h4>
+                                    <p>يمتد ليشمل باقي أجزاء الحوض المائي (زمن الانتقال من 1 إلى 45 ساعة). يخضع لإجراءات اليقظة البيئية والمراقبة الدورية.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig15_protection_perimeter.jpg" alt="Protection Perimeter Map" class="lightbox-trigger" data-img="assets/img/figures/fig15_protection_perimeter.jpg" data-caption="الشكل 15: خريطة محيطات الحماية المحددة لسد عين الناقة">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 15: خريطة محيطات الحماية لسد عين الناقة</span>
+                            </div>
+                            <div class="media-preview-box mt-2">
+                                <img src="assets/img/figures/fig14_transfer_time.png" alt="Transfer Time Map" class="lightbox-trigger" data-img="assets/img/figures/fig14_transfer_time.png" data-caption="الشكل 14: خريطة التوزيع المكاني لأزمنة الانتقال المائي بالحوض">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> الشكل 14: خريطة أزمنة الانتقال المائي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GIS Methodology & Workflow Section -->
+    <section id="methodology" class="methodology-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2 data-i18n="methTitle">منهجية نظم المعلومات الجغرافية GIS والتحليل المكاني</h2>
+                <p data-i18n="methSubtitle">آلية دمج المطبقات الهيدرولوجية وطبوغرافيا السطح لنماذج زمن الانتقال المائي</p>
+            </div>
+
+            <div class="workflow-grid">
+                <div class="workflow-card">
+                    <div class="wf-img-wrap">
+                        <img src="assets/img/figures/fig11_flow_direction.png" alt="Flow Direction" class="lightbox-trigger" data-img="assets/img/figures/fig11_flow_direction.png" data-caption="الشكل 11: خريطة اتجاه التدفق المائي Flow Direction">
+                    </div>
+                    <div class="wf-content">
+                        <h4>1. اتجاه التدفق (Flow Direction)</h4>
+                        <p>تحديد المسار الهيدرولوجي الطبيعي للمياه بناءً على انحدارات نموذج الارتفاع الرقمي DEM.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="wf-img-wrap">
+                        <img src="assets/img/figures/fig12_flow_accumulation.png" alt="Flow Accumulation" class="lightbox-trigger" data-img="assets/img/figures/fig12_flow_accumulation.png" data-caption="الشكل 12: خريطة التراكم الهيدرولوجي Flow Accumulation">
+                    </div>
+                    <div class="wf-content">
+                        <h4>2. التراكم الهيدرولوجي (Flow Accumulation)</h4>
+                        <p>حساب أعداد الخلايا التي تصب في كل نقطة لتحديد المجاري المائية الرئيسية والروافد.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="wf-img-wrap">
+                        <img src="assets/img/figures/fig13_roughness.png" alt="Surface Roughness" class="lightbox-trigger" data-img="assets/img/figures/fig13_roughness.png" data-caption="الشكل 13: خريطة معامل خشونة السطح Surface Roughness">
+                    </div>
+                    <div class="wf-content">
+                        <h4>3. خشونة السطح (Manning Roughness)</h4>
+                        <p>ربط استخدامات الأراضي (Land Use) بمعاملات مانينغ لتقدير أثر التغطية النباتية على إبطاء السرعة.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="wf-img-wrap">
+                        <img src="assets/img/figures/fig14_transfer_time.png" alt="Transfer Time" class="lightbox-trigger" data-img="assets/img/figures/fig14_transfer_time.png" data-caption="الشكل 14: خريطة زمن الانتقال المائي Water Transfer Time">
+                    </div>
+                    <div class="wf-content">
+                        <h4>4. نمذجة زمن الانتقال (Transfer Time)</h4>
+                        <p>إنتاج خريطة الأزمنة التي تقسم الحوض إلى نطاقات زمنية حاسمة لاتخاذ قرارات الحماية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Figures & Maps Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2 data-i18n="galleryTitle">معرض الأشكال والخرائط العلمية للكتاب</h2>
+                <p data-i18n="gallerySubtitle">استعرض جميع الخرائط والمخططات المرفقة في الكتاب الأكاديمي بدقة عالية (انقر على أي صورة للتكبير)</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig1_location.png" alt="Figure 1" class="lightbox-trigger" data-img="assets/img/figures/fig1_location.png" data-caption="الشكل 1: الموقع الجغرافي لحوض وادي الحي">
+                    <div class="gal-info">
+                        <h5>الشكل 1</h5>
+                        <p>الموقع الجغرافي لحوض وادي الحي</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig2_admin.png" alt="Figure 2" class="lightbox-trigger" data-img="assets/img/figures/fig2_admin.png" data-caption="الشكل 2: الخريطة الإدارية للحوض الفرعي">
+                    <div class="gal-info">
+                        <h5>الشكل 2</h5>
+                        <p>التقسيم الإداري والمراكز السكانية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig3_geology.jpg" alt="Figure 3" class="lightbox-trigger" data-img="assets/img/figures/fig3_geology.jpg" data-caption="الشكل 3: الخريطة الجيولوجية الإقليمية">
+                    <div class="gal-info">
+                        <h5>الشكل 3</h5>
+                        <p>الخريطة الجيولوجية الإقليمية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig4_aquifers.png" alt="Figure 4" class="lightbox-trigger" data-img="assets/img/figures/fig4_aquifers.png" data-caption="الشكل 4: خريطة المجموعات الهيدروجيولوجية والخزانات">
+                    <div class="gal-info">
+                        <h5>الشكل 4</h5>
+                        <p>الخزانات المائية الرئيسية بالحوض</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig5_dam_location.jpg" alt="Figure 5" class="lightbox-trigger" data-img="assets/img/figures/fig5_dam_location.jpg" data-caption="الشكل 5: خريطة الموقع الجغرافي لسد عين الناقة">
+                    <div class="gal-info">
+                        <h5>الشكل 5</h5>
+                        <p>موقع سد عين الناقة والبحيرة</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig6_hydrographic.png" alt="Figure 6" class="lightbox-trigger" data-img="assets/img/figures/fig6_hydrographic.png" data-caption="الشكل 6: شبكة الصرف الهيدروغرافي">
+                    <div class="gal-info">
+                        <h5>الشكل 6</h5>
+                        <p>شبكة الصرف الهيدروغرافي</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig7_pollution.png" alt="Figure 7" class="lightbox-trigger" data-img="assets/img/figures/fig7_pollution.png" data-caption="الشكل 7: خريطة جرد مصادر التلوث بالحوض">
+                    <div class="gal-info">
+                        <h5>الشكل 7</h5>
+                        <p>جرد مصادر التلوث بالحوض</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig8_landuse.jpg" alt="Figure 8" class="lightbox-trigger" data-img="assets/img/figures/fig8_landuse.jpg" data-caption="الشكل 8: خريطة استخدام الأراضي (Land Use)">
+                    <div class="gal-info">
+                        <h5>الشكل 8</h5>
+                        <p>استخدام الأراضي الغطاء النباتي</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig9_slope.jpg" alt="Figure 9" class="lightbox-trigger" data-img="assets/img/figures/fig9_slope.jpg" data-caption="الشكل 9: خريطة الميول وانحدار السطح">
+                    <div class="gal-info">
+                        <h5>الشكل 9</h5>
+                        <p>خريطة الميول وانحدار السطح</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig10_gis_framework.jpg" alt="Figure 10" class="lightbox-trigger" data-img="assets/img/figures/fig10_gis_framework.jpg" data-caption="الشكل 10: إطار التكامل القائم على GIS">
+                    <div class="gal-info">
+                        <h5>الشكل 10</h5>
+                        <p>إطار التكامل المكاني القائم على GIS</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig14_transfer_time.png" alt="Figure 14" class="lightbox-trigger" data-img="assets/img/figures/fig14_transfer_time.png" data-caption="الشكل 14: خريطة زمن الانتقال المائي">
+                    <div class="gal-info">
+                        <h5>الشكل 14</h5>
+                        <p>خريطة زمن الانتقال المائي</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig15_protection_perimeter.jpg" alt="Figure 15" class="lightbox-trigger" data-img="assets/img/figures/fig15_protection_perimeter.jpg" data-caption="الشكل 15: خريطة محيطات الحماية لسد عين الناقة">
+                    <div class="gal-info">
+                        <h5>الشكل 15</h5>
+                        <p>محيطات حماية سد عين الناقة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Profile & Contact Details -->
+    <section id="author" class="author-section">
+        <div class="container">
+            <div class="author-card">
+                <div class="author-avatar-wrap">
+                    <div class="avatar-circle">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="author-badge">PhD Hydrogeology</div>
+                </div>
+
+                <div class="author-details">
+                    <h2 data-i18n="authorName">الدكتور عز الدين رغيس (Dr. Azzeddine Reghais)</h2>
+                    <p class="author-title" data-i18n="authorTitle">دكتوراه في الهيدروجيولوجيا - باحث ومحاضر جامعي</p>
+                    <p class="author-bio" data-i18n="authorBio">
+                        متخصص في التطبيقات المتقدمة لنظم المعلومات الجغرافية (GIS)، الاستشعار عن بعد (Remote Sensing)، وتطبيقات الذكاء الاصطناعي وتعلم الآلة (Machine Learning) في الهيدروجيولوجيا، تقييم واستقرار المنحدرات، وجودة المياه الجوفية والسطحية.
+                    </p>
+
+                    <div class="author-contact-grid">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-building"></i>
+                            <div>
+                                <strong>المؤسسة الأكاديمية:</strong>
+                                <p>جامعة جيجل / مخبر الهندسة الجيولوجية (LGG) | جامعة باتنة 2</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>البريد الإلكتروني:</strong>
+                                <p><a href="mailto:azzeddine.reghais@gmail.com">azzeddine.reghais@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <strong>الهاتف / واتساب:</strong>
+                                <p><a href="https://wa.me/213668261708" target="_blank">+213 (0) 668 26 17 08</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-globe"></i>
+                            <div>
+                                <strong>الموقع الأكاديمي الشخصي:</strong>
+                                <p><a href="https://reghais.github.io/Azzeddine-REGHAIS/" target="_blank">reghais.github.io/Azzeddine-REGHAIS</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="academic-networks">
+                        <h4>الشبكات والمحركات البحثية الدولية:</h4>
+                        <div class="network-links">
+                            <a href="https://scholar.google.com/citations?user=ovT7Ao4AAAAJ&hl=en" target="_blank" class="net-btn"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+                            <a href="https://www.researchgate.net/profile/Azzeddine-Reghais" target="_blank" class="net-btn"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
+                            <a href="https://orcid.org/0000-0002-4968-9529" target="_blank" class="net-btn"><i class="fa-solid fa-id-card"></i> ORCID iD</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Access Modal -->
+    <div id="access-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <h3><i class="fa-solid fa-lock"></i> طلب إذن الوصول إلى الكتاب الكامل</h3>
+            <p>هذا الكتاب الأكاديمي مدفوع ومقيد الوصول. يمكنك التواصل مباشرة مع الدكتور عز الدين رغيس للحصول على النسخة الإلكترونية الكاملة أو طلب تصريح للباحثين للوصول.</p>
+
+            <form id="request-form" class="request-form">
+                <div class="form-group">
+                    <label>الاسم الكامل / Full Name *</label>
+                    <input type="text" id="req-name" required placeholder="مثال: د. أحمد المحمدي">
+                </div>
+                <div class="form-group">
+                    <label>البريد الإلكتروني / Email *</label>
+                    <input type="email" id="req-email" required placeholder="name@institution.edu">
+                </div>
+                <div class="form-group">
+                    <label>المؤسسة / الجامعة Institution *</label>
+                    <input type="text" id="req-org" required placeholder="جامعة الجزائر / مركز البحوث">
+                </div>
+                <div class="form-group">
+                    <label>سبب الطلب / Purpose of Request *</label>
+                    <textarea id="req-message" rows="3" required placeholder="اكتب الهدف البحثي أو العلمي للاطلاع على الكتاب..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> إرسال عبر واتساب</button>
+                    <button type="button" id="btn-send-email-form" class="btn btn-email"><i class="fa-solid fa-envelope"></i> إرسال عبر البريد</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close-btn">&times;</button>
+            <img src="" id="lightbox-img" alt="Enlarged View">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <i class="fa-solid fa-droplet"></i>
+                <span>كتاب حماية الموارد المائية - سد عين الناقة</span>
+            </div>
+            <p class="footer-copy">© جميع الحقوق محفوظة. الدكتور عز الدين رغيس - Dr. Azzeddine Reghais.</p>
+        </div>
+    </footer>
+
+    <!-- MathJax for Rendering Formulas -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
