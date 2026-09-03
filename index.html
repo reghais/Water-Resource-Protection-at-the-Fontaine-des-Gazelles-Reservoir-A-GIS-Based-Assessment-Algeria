@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water-Resource Protection at the Fontaine des Gazelles Reservoir | Dr. Azzeddine Reghais</title>
+    <meta name="description" content="A GIS-Based Assessment of Water-Resource Protection at the Fontaine des Gazelles Reservoir & Oued El-Hai Watershed, Algeria by Dr. Azzeddine Reghais.">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="brand-logo">
+                <i class="fa-solid fa-droplet icon-logo"></i>
+                <div class="brand-text">
+                    <span class="brand-title">Water-Resource Protection</span>
+                    <span class="brand-subtitle">Dr. Azzeddine Reghais - Academic Monograph</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active">About Book</a></li>
+                    <li><a href="#stats" class="nav-link">Watershed Metrics</a></li>
+                    <li><a href="#chapters" class="nav-link">Chapters</a></li>
+                    <li><a href="#methodology" class="nav-link">GIS Methodology</a></li>
+                    <li><a href="#gallery" class="nav-link">Maps & Figures</a></li>
+                    <li><a href="#author" class="nav-link">Author & Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#access-modal" class="btn btn-primary btn-request" id="btn-request-top">Request Access / Purchase</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge-tag"><i class="fa-solid fa-book-bookmark"></i> Peer-Reviewed Academic Edition (Restricted Access)</div>
+                <h1 class="hero-title">
+                    Water-Resource Protection at the Fontaine des Gazelles Reservoir: A GIS-Based Assessment (Algeria)
+                </h1>
+                <p class="hero-subtitle-en">
+                    An Integrated Geoscientific Framework for Surface Water Catchment Protection in Arid and Semi-Arid Regions
+                </p>
+                <p class="hero-description">
+                    This book presents an integrated assessment of water-resource protection in the Fontaine des Gazelles reservoir and its contributing Oued El-Hai watershed in northeastern Algeria. Utilizing Geographic Information Systems (GIS), travel-time modeling, and spatial vulnerability mapping, it establishes differentiated protection perimeters (Immediate, Close, and Remote) to safeguard vital drinking and irrigation water supplies.
+                </p>
+
+                <div class="book-meta-pills">
+                    <span class="meta-pill"><i class="fa-solid fa-user-graduate"></i> Author: Dr. Azzeddine Reghais</span>
+                    <span class="meta-pill"><i class="fa-solid fa-building-columns"></i> University of Jijel / Batna 2 University</span>
+                    <span class="meta-pill"><i class="fa-solid fa-file-pdf"></i> 101 Pages / 6 Core Chapters</span>
+                    <span class="meta-pill"><i class="fa-solid fa-shield-halved"></i> Restricted Access Monograph</span>
+                </div>
+
+                <div class="hero-cta-buttons">
+                    <a href="https://wa.me/213668261708?text=Hello%20Dr.%20Azzeddine%20Reghais,%20I%20am%20interested%20in%20requesting%20access%20to%20your%20book%20on%20Water-Resource%20Protection%20at%20Fontaine%20des%20Gazelles%20Reservoir." target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Request Access via WhatsApp
+                    </a>
+                    <a href="mailto:azzeddine.reghais@gmail.com?subject=Inquiry%20Regarding%20Book:%20Water-Resource%20Protection%20Fontaine%20des%20Gazelles" class="btn btn-email">
+                        <i class="fa-solid fa-envelope"></i> Contact via Email
+                    </a>
+                    <a href="#chapters" class="btn btn-secondary">
+                        <i class="fa-solid fa-list-check"></i> Explore Chapters & Figures
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="book-3d-card">
+                    <img src="assets/img/figures/book_cover.jpg" alt="Book Cover - Water-Resource Protection at the Fontaine des Gazelles Reservoir" class="book-cover-img">
+                    <div class="cover-overlay-badge">
+                        <span><i class="fa-solid fa-lock"></i> Restricted Academic Monograph</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics & Indicators -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2>Watershed & Reservoir Key Indicators</h2>
+                <p>Fundamental quantitative parameters and physio-hydrological metrics derived for the Oued El-Hai catchment and dam</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-chart-area"></i></div>
+                    <div class="stat-value">1,660 km²</div>
+                    <div class="stat-label">Sub-Watershed Total Area</div>
+                    <p class="stat-desc">Extends across Batna and Biskra provinces in the Aurès mountain ranges.</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-water"></i></div>
+                    <div class="stat-value">55 hm³</div>
+                    <div class="stat-label">Fontaine des Gazelles Storage Capacity</div>
+                    <p class="stat-desc">Strategic reservoir supplying domestic drinking water and agricultural irrigation in El-Kantara & Ain Naga.</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="stat-value">3 Zone System</div>
+                    <div class="stat-label">Protection Perimeters (IPP / CPP / RPP)</div>
+                    <p class="stat-desc">Hierarchical protection zones: Immediate (Zone I), Close (Zone II), and Remote (Zone III).</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-stopwatch"></i></div>
+                    <div class="stat-value">1 - 45 Hours</div>
+                    <div class="stat-label">Water Transfer Time Range</div>
+                    <p class="stat-desc">Spatially calculated runoff travel time from any catchment point to the reservoir shoreline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Chapters Explorer -->
+    <section id="chapters" class="chapters-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2>Academic Book Chapters & Core Themes</h2>
+                <p>Browse detailed scientific summaries and key takeaways across all 6 chapters along with thematic GIS maps</p>
+            </div>
+
+            <!-- Chapter Navigation Tabs -->
+            <div class="chapter-tabs-wrapper">
+                <div class="chapter-tabs" id="chapter-tabs">
+                    <button class="tab-btn active" data-chapter="ch1">
+                        <span class="tab-num">01</span>
+                        <span class="tab-title">Concepts & Approaches</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch2">
+                        <span class="tab-num">02</span>
+                        <span class="tab-title">Oued El-Hai Setting</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch3">
+                        <span class="tab-num">03</span>
+                        <span class="tab-title">Geology & Aquifers</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch4">
+                        <span class="tab-num">04</span>
+                        <span class="tab-title">Morphometrics & Hydrology</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch5">
+                        <span class="tab-num">05</span>
+                        <span class="tab-title">GIS Framework</span>
+                    </button>
+                    <button class="tab-btn" data-chapter="ch6">
+                        <span class="tab-num">06</span>
+                        <span class="tab-title">Application & Results</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chapter Content Panels -->
+            <div class="chapter-panels-container">
+
+                <!-- CH1 Panel -->
+                <div class="chapter-panel active" id="panel-ch1">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 1</span>
+                            <h3>Water Resources Protection: Concepts, Challenges and Approaches</h3>
+                            <p class="lead-p">
+                                Chapter 1 establishes the theoretical and environmental foundations for protecting surface water reservoirs in arid and semi-arid environments, emphasizing whole-catchment protection rather than isolated geometric buffer zones around the dam.
+                            </p>
+                            <div class="chapter-highlights">
+                                <h4><i class="fa-solid fa-lightbulb"></i> Key Chapter Takeaways:</h4>
+                                <ul>
+                                    <li><strong>Pollution Source Categorization:</strong> Distinguishes between point sources (wastewater outfalls, industrial discharges) and diffuse sources (agricultural runoff, soil erosion).</li>
+                                    <li><strong>Catchment Approach:</strong> Treats the entire 1,660 km² feeding watershed as the fundamental spatial unit transferring water, sediment, and nutrients to the impoundment.</li>
+                                    <li><strong>Conceptual Risk Chain:</strong> Based on the physical sequence: <em>Source &rarr; Pathway &rarr; Transfer &rarr; Receptor</em>.</li>
+                                    <li><strong>Three-Level Protection System:</strong> Defines Immediate Protection Perimeter (IPP), Close Protection Perimeter (CPP), and Remote Protection Perimeter (RPP).</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig10_gis_framework.jpg" alt="GIS Framework Overview" class="lightbox-trigger" data-img="assets/img/figures/fig10_gis_framework.jpg" data-caption="Figure 10: GIS-based spatial integration framework for protection-perimeter delineation">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 10: GIS Integration Workflow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH2 Panel -->
+                <div class="chapter-panel" id="panel-ch2">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 2</span>
+                            <h3>The Oued El-Hai Watershed: Geographic, Environmental and Socioeconomic Setting</h3>
+                            <p class="lead-p">
+                                A comprehensive physiographic and environmental characterization of the Oued El-Hai watershed spanning Batna and Biskra provinces (including Ain Touta, El-Kantara, and Berni agricultural sectors).
+                            </p>
+                            <div class="chapter-highlights">
+                                <h4><i class="fa-solid fa-location-dot"></i> Key Chapter Takeaways:</h4>
+                                <ul>
+                                    <li><strong>Geographic Location:</strong> Located in the Eastern Saharan Atlas, draining into the endorheic Chott Melghir system.</li>
+                                    <li><strong>Fontaine des Gazelles Dam Context:</strong> Impoundment constructed to store ~55 hm³ for domestic water supply and regional irrigation.</li>
+                                    <li><strong>Human & Anthropogenic Pressures:</strong> Population centers in Ain Touta and El-Kantara generate domestic sewage and agricultural return flows.</li>
+                                    <li><strong>Siltation & Sedimentation:</strong> Torrential runoff from northern tributaries contributes heavy sediment loads, reducing effective reservoir storage capacity.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig1_location.png" alt="Geographical Location" class="lightbox-trigger" data-img="assets/img/figures/fig1_location.png" data-caption="Figure 1: Geographical location of the Oued El-Hai watershed and regional setting">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 1: Watershed Location Map</span>
+                            </div>
+                            <div class="media-preview-box mt-2">
+                                <img src="assets/img/figures/fig2_admin.png" alt="Administrative Map" class="lightbox-trigger" data-img="assets/img/figures/fig2_admin.png" data-caption="Figure 2: Administrative boundaries and settlement patterns in the watershed">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 2: Administrative Sub-divisions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH3 Panel -->
+                <div class="chapter-panel" id="panel-ch3">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 3</span>
+                            <h3>Geological and Hydrogeological Framework of the Watershed</h3>
+                            <p class="lead-p">
+                                Detailed stratigraphic and structural mapping from Triassic evaporites to Quaternary deposits, evaluating how geological formations and fault networks govern runoff generation, infiltration, and groundwater-surface water connectivity.
+                            </p>
+                            <div class="chapter-highlights">
+                                <h4><i class="fa-solid fa-mountain"></i> Key Chapter Takeaways:</h4>
+                                <ul>
+                                    <li><strong>Stratigraphic Sequence:</strong> Triassic evaporite diapirs, Turonian and Maestrichtian carbonates, Pliocene conglomerates, and Quaternary alluvium.</li>
+                                    <li><strong>Major Aquifer Units:</strong> Karstic Turonian limestone aquifer, Maestrichtian aquifer, and Quaternary alluvial valley-fill aquitards/aquifers.</li>
+                                    <li><strong>Structural Controls:</strong> Tectonic faults and fold orientations (anticlines/synclines) create preferred groundwater flow paths and discharge springs into main wadi channels.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig3_geology.jpg" alt="Geological Map" class="lightbox-trigger" data-img="assets/img/figures/fig3_geology.jpg" data-caption="Figure 3: Regional geological map of the Oued El-Hai watershed">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 3: Regional Geological Map</span>
+                            </div>
+                            <div class="media-preview-box mt-2">
+                                <img src="assets/img/figures/fig4_aquifers.png" alt="Main Aquifers" class="lightbox-trigger" data-img="assets/img/figures/fig4_aquifers.png" data-caption="Figure 4: Main hydrogeological units and aquifer systems in the watershed">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 4: Aquifer Systems Map</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH4 Panel -->
+                <div class="chapter-panel" id="panel-ch4">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 4</span>
+                            <h3>Physiographic and Hydrological Characteristics</h3>
+                            <p class="lead-p">
+                                Quantitative morphometric analysis, drainage network hierarchy, slope geometry, and estimation of watershed hydrological response times.
+                            </p>
+
+                            <!-- Morphometric Parameters Table -->
+                            <div class="table-responsive mt-3">
+                                <table class="academic-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Morphometric Parameter</th>
+                                            <th>Symbol / Unit</th>
+                                            <th>Observed Value</th>
+                                            <th>Hydrological Significance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Gravelius Compactness Coefficient</td>
+                                            <td>Kc</td>
+                                            <td>1.45 - 1.62</td>
+                                            <td>Elongated catchment geometry moderating flood peak concentration relative to circular basins.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Drainage Density</td>
+                                            <td>Dd (km/km²)</td>
+                                            <td>2.1 - 3.4 km/km²</td>
+                                            <td>Moderate to high drainage density reflecting rapid surface runoff generation during rainstorms.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Concentration / Transfer Time</td>
+                                            <td>Tc (hours)</td>
+                                            <td>~ 12 - 18 hours</td>
+                                            <td>Total time for runoff from the farthest watershed boundary to reach the outlet.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Torrentiality Coefficient</td>
+                                            <td>Ct</td>
+                                            <td>High in headwaters</td>
+                                            <td>Pronounced sheet erosion and heavy sediment transport into the reservoir.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig6_hydrographic.png" alt="Hydrographic Network" class="lightbox-trigger" data-img="assets/img/figures/fig6_hydrographic.png" data-caption="Figure 6: Hydrographic drainage network of the Oued El-Hai sub-basin">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 6: Hydrographic Network Map</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH5 Panel -->
+                <div class="chapter-panel" id="panel-ch5">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 5</span>
+                            <h3>Methodological Framework for Delineating Protection Perimeters</h3>
+                            <p class="lead-p">
+                                Establishes the spatially explicit GIS framework that calculates "Water Transfer Time" across the terrain rather than relying on static circular distance buffers.
+                            </p>
+                            <div class="chapter-highlights">
+                                <h4><i class="fa-solid fa-diagram-project"></i> Sequential GIS Processing Workflow:</h4>
+                                <ol class="steps-list">
+                                    <li><strong>Digital Elevation Model (DEM):</strong> Topographic extraction of elevations, slopes, and flow gradients.</li>
+                                    <li><strong>D8 Flow Direction Algorithm:</strong> Routing water movement across cell neighborhoods.</li>
+                                    <li><strong>Flow Accumulation Modeling:</strong> Delineating flow pathways and stream channel networks.</li>
+                                    <li><strong>Manning Surface Roughness (n):</strong> Parameterizing hydraulic friction based on Land Use / Land Cover layers.</li>
+                                    <li><strong>Water Transfer Time Calculation:</strong> Integrating slope, distance, and Manning velocity equation:
+                                        <div class="math-formula">
+                                            \( V = \frac{1}{n} R^{2/3} S^{1/2} \quad \implies \quad T_c = \sum \frac{d_i}{V_i} \)
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig10_gis_framework.jpg" alt="GIS Integrated Workflow" class="lightbox-trigger" data-img="assets/img/figures/fig10_gis_framework.jpg" data-caption="Figure 10: GIS-based spatial integration framework and data layers">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 10: GIS Methodological Diagram</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CH6 Panel -->
+                <div class="chapter-panel" id="panel-ch6">
+                    <div class="chapter-card-grid">
+                        <div class="chapter-body">
+                            <span class="chapter-badge">Chapter 6</span>
+                            <h3>Application of the Protection Perimeter Concept to Fontaine des Gazelles</h3>
+                            <p class="lead-p">
+                                Practical GIS implementation for the Fontaine des Gazelles reservoir, producing the final spatially differentiated Immediate, Close, and Remote Protection Perimeters.
+                            </p>
+
+                            <div class="protection-zones-cards mt-3">
+                                <div class="p-zone-card zone-ipp">
+                                    <div class="zone-badge">Zone I - IPP</div>
+                                    <h4>Immediate Protection Zone</h4>
+                                    <p>Directly encompasses the reservoir water body and shoreline. Strict exclusion of all human construction, agricultural dumping, or unauthorized entry.</p>
+                                </div>
+                                <div class="p-zone-card zone-cpp">
+                                    <div class="zone-badge">Zone II - CPP</div>
+                                    <h4>Close Protection Zone</h4>
+                                    <p>Covers areas where runoff transfer time to the reservoir is <strong>less than 1 hour (&lt; 1h)</strong>. Regulates fertilizer, pesticide, and urban effluent discharges.</p>
+                                </div>
+                                <div class="p-zone-card zone-rpp">
+                                    <div class="zone-badge">Zone III - RPP</div>
+                                    <h4>Remote Protection Zone</h4>
+                                    <p>Extends across the broader contributing catchment (travel time 1 to 45 hours). Subject to environmental monitoring and catchment-wide vigilance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chapter-side-media">
+                            <div class="media-preview-box">
+                                <img src="assets/img/figures/fig15_protection_perimeter.jpg" alt="Protection Perimeter Map" class="lightbox-trigger" data-img="assets/img/figures/fig15_protection_perimeter.jpg" data-caption="Figure 15: Delineated protection perimeters map for the Fontaine des Gazelles reservoir">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 15: Protection Perimeters Map</span>
+                            </div>
+                            <div class="media-preview-box mt-2">
+                                <img src="assets/img/figures/fig14_transfer_time.png" alt="Transfer Time Map" class="lightbox-trigger" data-img="assets/img/figures/fig14_transfer_time.png" data-caption="Figure 14: Spatial distribution map of water transfer times across the watershed">
+                                <span class="fig-label"><i class="fa-solid fa-magnifying-glass-plus"></i> Figure 14: Water Transfer Time Map</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GIS Methodology & Workflow Section -->
+    <section id="methodology" class="methodology-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2>GIS Spatial Analysis & Hydrological Modeling Workflow</h2>
+                <p>How surface elevation, Manning roughness, and slope gradients are integrated into spatial transfer time models</p>
+            </div>
+
+            <div class="workflow-grid">
+                <div class="workflow-card">
+                    <div class="wf-img-wrap">
+                        <img src="assets/img/figures/fig11_flow_direction.png" alt="Flow Direction" class="lightbox-trigger" data-img="assets/img/figures/fig11_flow_direction.png" data-caption="Figure 11: D8 Flow Direction Map derived from Digital Elevation Model">
+                    </div>
+                    <div class="wf-content">
+                        <h4>1. Flow Direction (D8)</h4>
+                        <p>Determines the steepest downhill routing path for surface water from each elevation cell.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="wf-img-wrap">
+                        <img src="assets/img/figures/fig12_flow_accumulation.png" alt="Flow Accumulation" class="lightbox-trigger" data-img="assets/img/figures/fig12_flow_accumulation.png" data-caption="Figure 12: Flow Accumulation Map defining stream channels">
+                    </div>
+                    <div class="wf-content">
+                        <h4>2. Flow Accumulation</h4>
+                        <p>Calculates accumulated cell counts to locate stream channels and concentration points.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="wf-img-wrap">
+                        <img src="assets/img/figures/fig13_roughness.png" alt="Surface Roughness" class="lightbox-trigger" data-img="assets/img/figures/fig13_roughness.png" data-caption="Figure 13: Manning Surface Roughness Map parameterized by Land Use">
+                    </div>
+                    <div class="wf-content">
+                        <h4>3. Surface Roughness (Manning)</h4>
+                        <p>Assigns roughness coefficients (n) based on Land Cover to model hydraulic resistance.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="wf-img-wrap">
+                        <img src="assets/img/figures/fig14_transfer_time.png" alt="Transfer Time" class="lightbox-trigger" data-img="assets/img/figures/fig14_transfer_time.png" data-caption="Figure 14: Spatially modeled Water Transfer Time Map (1 to 45 hours)">
+                    </div>
+                    <div class="wf-content">
+                        <h4>4. Water Transfer Time</h4>
+                        <p>Produces travel time zones enabling time-based delineation of Close and Remote protection perimeters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Figures & Maps Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <h2>Scientific Figures & GIS Maps Gallery</h2>
+                <p>Explore all high-resolution figures, geological maps, and GIS layers included in the academic monograph (click to enlarge)</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig1_location.png" alt="Figure 1" class="lightbox-trigger" data-img="assets/img/figures/fig1_location.png" data-caption="Figure 1: Geographical Location of the Oued El-Hai Watershed">
+                    <div class="gal-info">
+                        <h5>Figure 1</h5>
+                        <p>Geographical Location Map</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig2_admin.png" alt="Figure 2" class="lightbox-trigger" data-img="assets/img/figures/fig2_admin.png" data-caption="Figure 2: Administrative Map of the Oued El-Hai Sub-Watershed">
+                    <div class="gal-info">
+                        <h5>Figure 2</h5>
+                        <p>Administrative Boundaries</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig3_geology.jpg" alt="Figure 3" class="lightbox-trigger" data-img="assets/img/figures/fig3_geology.jpg" data-caption="Figure 3: Regional Geological Map of the Oued El-Hai Watershed">
+                    <div class="gal-info">
+                        <h5>Figure 3</h5>
+                        <p>Regional Geology</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig4_aquifers.png" alt="Figure 4" class="lightbox-trigger" data-img="assets/img/figures/fig4_aquifers.png" data-caption="Figure 4: Main Aquifers of the Oued El-Hai Watershed">
+                    <div class="gal-info">
+                        <h5>Figure 4</h5>
+                        <p>Main Aquifer Systems</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig5_dam_location.jpg" alt="Figure 5" class="lightbox-trigger" data-img="assets/img/figures/fig5_dam_location.jpg" data-caption="Figure 5: Geographical Location of the Fontaine des Gazelles Dam">
+                    <div class="gal-info">
+                        <h5>Figure 5</h5>
+                        <p>Fontaine des Gazelles Dam Setting</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig6_hydrographic.png" alt="Figure 6" class="lightbox-trigger" data-img="assets/img/figures/fig6_hydrographic.png" data-caption="Figure 6: Hydrographic Network Map of the Watershed">
+                    <div class="gal-info">
+                        <h5>Figure 6</h5>
+                        <p>Hydrographic Drainage Network</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig7_pollution.png" alt="Figure 7" class="lightbox-trigger" data-img="assets/img/figures/fig7_pollution.png" data-caption="Figure 7: Pollution-Source Map of the Oued El-Hai Sub-Basin">
+                    <div class="gal-info">
+                        <h5>Figure 7</h5>
+                        <p>Pollution Inventory Map</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig8_landuse.jpg" alt="Figure 8" class="lightbox-trigger" data-img="assets/img/figures/fig8_landuse.jpg" data-caption="Figure 8: Land-Use Map of the Oued El-Hai Sub-Basin">
+                    <div class="gal-info">
+                        <h5>Figure 8</h5>
+                        <p>Land Use / Land Cover</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig9_slope.jpg" alt="Figure 9" class="lightbox-trigger" data-img="assets/img/figures/fig9_slope.jpg" data-caption="Figure 9: Slope Map of the Oued El-Hai Sub-Basin">
+                    <div class="gal-info">
+                        <h5>Figure 9</h5>
+                        <p>Terrain Slope Gradients</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig10_gis_framework.jpg" alt="Figure 10" class="lightbox-trigger" data-img="assets/img/figures/fig10_gis_framework.jpg" data-caption="Figure 10: GIS Based Integration Framework">
+                    <div class="gal-info">
+                        <h5>Figure 10</h5>
+                        <p>GIS Integration Framework</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig14_transfer_time.png" alt="Figure 14" class="lightbox-trigger" data-img="assets/img/figures/fig14_transfer_time.png" data-caption="Figure 14: Water-Transfer-Time Map">
+                    <div class="gal-info">
+                        <h5>Figure 14</h5>
+                        <p>Water Transfer Time Map</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/img/figures/fig15_protection_perimeter.jpg" alt="Figure 15" class="lightbox-trigger" data-img="assets/img/figures/fig15_protection_perimeter.jpg" data-caption="Figure 15: Protection-Perimeter Map">
+                    <div class="gal-info">
+                        <h5>Figure 15</h5>
+                        <p>Delineated Protection Zones Map</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Profile & Contact Details -->
+    <section id="author" class="author-section">
+        <div class="container">
+            <div class="author-card">
+                <div class="author-avatar-wrap">
+                    <div class="avatar-photo-box">
+                        <img src="assets/img/author.png" alt="Dr. Azzeddine Reghais" class="author-photo">
+                    </div>
+                    <div class="author-badge">PhD Hydrogeology</div>
+                </div>
+
+                <div class="author-details">
+                    <h2>Dr. Azzeddine Reghais</h2>
+                    <p class="author-title">PhD in Hydrogeology — University Researcher & Lecturer</p>
+                    <p class="author-bio">
+                        Specializing in high-tech applications of GIS, Remote Sensing, and Machine Learning in water resources, hydrogeochemical processes, slope stability analysis, and environmental hazard mitigation.
+                    </p>
+
+                    <div class="author-contact-grid">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-building"></i>
+                            <div>
+                                <strong>Academic Institutions:</strong>
+                                <p>Jijel University / Geological Engineering Laboratory (LGG) | Batna 2 University</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Email Address:</strong>
+                                <p><a href="mailto:azzeddine.reghais@gmail.com">azzeddine.reghais@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <strong>Phone / WhatsApp:</strong>
+                                <p><a href="https://wa.me/213668261708" target="_blank">+213 (0) 668 26 17 08</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-globe"></i>
+                            <div>
+                                <strong>Personal Academic Site:</strong>
+                                <p><a href="https://reghais.github.io/Azzeddine-REGHAIS/" target="_blank">reghais.github.io/Azzeddine-REGHAIS</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="academic-networks">
+                        <h4>International Research Networks & Profiles:</h4>
+                        <div class="network-links">
+                            <a href="https://scholar.google.com/citations?user=ovT7Ao4AAAAJ&hl=en" target="_blank" class="net-btn"><i class="fa-solid fa-graduation-cap"></i> Google Scholar Profile</a>
+                            <a href="https://www.researchgate.net/profile/Azzeddine-Reghais" target="_blank" class="net-btn"><i class="fa-brands fa-researchgate"></i> ResearchGate Profile</a>
+                            <a href="https://orcid.org/0000-0002-4968-9529" target="_blank" class="net-btn"><i class="fa-solid fa-id-card"></i> ORCID iD Record</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Access Modal -->
+    <div id="access-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <h3><i class="fa-solid fa-lock"></i> Request Book Access / Purchase Permission</h3>
+            <p>This academic monograph is a restricted-access publication. Please fill out the form below to contact Dr. Azzeddine Reghais directly for full digital copies or research access.</p>
+
+            <form id="request-form" class="request-form">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" id="req-name" required placeholder="e.g., Prof. Sarah Jenkins">
+                </div>
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" id="req-email" required placeholder="s.jenkins@university.edu">
+                </div>
+                <div class="form-group">
+                    <label>Institution / Organization *</label>
+                    <input type="text" id="req-org" required placeholder="e.g., University of Oxford / National Water Authority">
+                </div>
+                <div class="form-group">
+                    <label>Purpose of Request *</label>
+                    <textarea id="req-message" rows="3" required placeholder="Describe your research interest or motivation for reviewing this book..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
+                    <button type="button" id="btn-send-email-form" class="btn btn-email"><i class="fa-solid fa-envelope"></i> Send via Email</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close-btn">&times;</button>
+            <img src="" id="lightbox-img" alt="Enlarged Figure View">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <i class="fa-solid fa-droplet"></i>
+                <span>Water-Resource Protection Monograph - Dr. Azzeddine Reghais</span>
+            </div>
+            <p class="footer-copy">&copy; All rights reserved. Dr. Azzeddine Reghais.</p>
+        </div>
+    </footer>
+
+    <!-- MathJax for Rendering Formulas -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
